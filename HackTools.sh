@@ -5,7 +5,7 @@ do
 	tools=${hackTools[$i]};
 	if dpkg -s $tools | grep -w installed
 	then
-		echo $tools is installed >> installed.txt
+		echo $tools is installed >> installed.txt && sudo apt remove $tools
 	fi
 done 
 
